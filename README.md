@@ -47,6 +47,16 @@ My work lies at the intersection of **education technology**, **generative AI**,
 
 ---
 
+## 🐍 Contribution Graph
+
+<div align="center">
+  
+![snake gif](https://github.com/nvdpsingh/nvdpsingh/blob/output/github-contribution-grid-snake.svg)
+
+</div>
+
+---
+
 ## 💼 Experience  
 
 **🎓 Graduate Research Assistant – CSU East Bay** *(Sep 2025 – Present)*  
