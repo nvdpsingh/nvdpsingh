@@ -80,11 +80,21 @@ My work lies at the intersection of **education technology**, **generative AI**,
 
 <div align="center">
   
-![Trophies](https://github-profile-trophy.vercel.app/?username=nvdpsingh&theme=algolia&no-frame=true&row=1&margin-w=15)  
+<a href="https://github.com/nvdpsingh">
+  <img src="https://github-profile-trophy.vercel.app/?username=nvdpsingh&theme=algolia&no-frame=true&row=1&margin-w=15" alt="Trophies"/>
+</a>
+
 <br>
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=nvdpsingh&show_icons=true&theme=algolia&count_private=true" alt="Stats"/>
-<img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=nvdpsingh&theme=algolia" alt="Streak"/>
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=nvdpsingh&layout=compact&theme=algolia&hide=html,css" alt="Languages"/>
+
+<a href="https://github.com/nvdpsingh">
+  <img height="170" src="https://github-readme-stats.vercel.app/api?username=nvdpsingh&show_icons=true&theme=algolia&count_private=true" alt="GitHub Stats"/>
+</a>
+<a href="https://github.com/nvdpsingh">
+  <img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=nvdpsingh&theme=algolia" alt="GitHub Streak"/>
+</a>
+<a href="https://github.com/nvdpsingh">
+  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=nvdpsingh&layout=compact&theme=algolia&hide=html,css" alt="Top Languages"/>
+</a>
 
 </div>
 
@@ -94,7 +104,11 @@ My work lies at the intersection of **education technology**, **generative AI**,
 
 <div align="center">
   
-![snake gif](https://github.com/nvdpsingh/nvdpsingh/blob/output/github-contribution-grid-snake.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/nvdpsingh/nvdpsingh/output/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/nvdpsingh/nvdpsingh/output/github-contribution-grid-snake.svg">
+  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/nvdpsingh/nvdpsingh/output/github-contribution-grid-snake.svg">
+</picture>
 
 </div>
 
@@ -104,14 +118,20 @@ My work lies at the intersection of **education technology**, **generative AI**,
 
 <div align="center">
 
-![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=nvdpsingh&theme=react-dark&hide_border=true&area=true)
+<a href="https://github.com/nvdpsingh">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=nvdpsingh&theme=react-dark&hide_border=true&area=true" alt="Activity Graph" width="100%"/>
+</a>
 
 ### 📅 Contribution Insights
-![GitHub Contribution Graph](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=nvdpsingh&theme=algolia)
+<a href="https://github.com/nvdpsingh">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=nvdpsingh&theme=algolia" alt="Contribution Details" width="100%"/>
+</a>
 
 ### ⏱️ Productivity Stats
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=nvdpsingh&theme=algolia" alt="Productive Time"/>
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=nvdpsingh&theme=algolia" alt="Stats"/>
+<a href="https://github.com/nvdpsingh">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=nvdpsingh&theme=algolia" alt="Productive Time" width="49%"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=nvdpsingh&theme=algolia" alt="Stats" width="49%"/>
+</a>
 
 </div>
 
