@@ -10,10 +10,18 @@
 </p>
 
 <p align="center">
-[![Profile Views](https://komarev.com/ghpvc/?username=nvdpsingh&color=blue&style=flat-square)](https://github.com/nvdpsingh)
-[![GitHub Followers](https://img.shields.io/github/followers/nvdpsingh?label=Follow&style=social)](https://github.com/nvdpsingh)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?logo=linkedin&logoColor=white&style=flat-square)](https://linkedin.com/in/navdeep-singh-398494b3)
-[![Email](https://img.shields.io/badge/Email-Contact-D14836?logo=gmail&logoColor=white&style=flat-square)](mailto:navdeepsinghdhangar@gmail.com)
+  <a href="https://github.com/nvdpsingh">
+    <img src="https://komarev.com/ghpvc/?username=nvdpsingh&color=blue&style=flat-square" alt="Profile Views"/>
+  </a>
+  <a href="https://github.com/nvdpsingh?tab=followers">
+    <img src="https://img.shields.io/github/followers/nvdpsingh?label=Followers&style=flat-square&color=blue" alt="GitHub Followers"/>
+  </a>
+  <a href="https://linkedin.com/in/navdeep-singh-398494b3">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  </a>
+  <a href="mailto:navdeepsinghdhangar@gmail.com">
+    <img src="https://img.shields.io/badge/Email-Contact-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Email"/>
+  </a>
 </p>
 
 ---
