@@ -97,20 +97,20 @@ function aggregateWeeks(normalized) {
 function crystalMarkup(week, point, theme, progress) {
   const style = LEVEL_STYLE[week.contributionLevel];
   const size = 14 * style.scale;
-  const x = point.x;
-  const y = point.y;
   const color = theme[style.color];
-  const points = `${x},${y - size} ${x + size * 0.72},${y - size * 0.2} ${x + size * 0.45},${y + size} ${x - size * 0.45},${y + size} ${x - size * 0.72},${y - size * 0.2}`;
+  const points = `0,${-size} ${size * 0.72},${-size * 0.2} ${size * 0.45},${size} ${-size * 0.45},${size} ${-size * 0.72},${-size * 0.2}`;
   const key = progress.toFixed(3);
   const next = Math.min(0.999, progress + 0.002).toFixed(3);
   return `
-    <g class="crystal motion-layer" data-level="${week.contributionLevel}" data-week="${week.weekIndex}">
-      <polygon points="${points}" fill="${color}" stroke="${theme.text}" stroke-width="1.2" filter="url(#diamond-glow)"/>
-      <path d="M${x} ${y - size + 2}L${x + size * 0.22} ${y + size * 0.62}" stroke="${theme.tunnel}" stroke-width="1.3" opacity=".68"/>
+    <g class="crystal motion-layer" transform="translate(${point.x.toFixed(1)} ${point.y})" data-level="${week.contributionLevel}" data-scale="${style.scale}" data-color="${color}" data-week="${week.weekIndex}" data-route-progress="${key}">
+      <g>
+        <polygon points="${points}" fill="${color}" stroke="${theme.text}" stroke-width="1.2" filter="url(#diamond-glow)"/>
+        <path d="M0 ${-size + 2}L${size * 0.22} ${size * 0.62}" stroke="${theme.tunnel}" stroke-width="1.3" opacity=".68"/>
+        <animateTransform attributeName="transform" type="scale" values="1;1.12;1" dur="1.6s" repeatCount="indefinite"/>
+      </g>
       <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;${key};${next};1" dur="20s" repeatCount="indefinite"/>
-      <animateTransform attributeName="transform" type="scale" values="1;1.12;1" dur="1.6s" repeatCount="indefinite" additive="sum"/>
     </g>
-    <g class="crystal-static rest-layer" data-level="${week.contributionLevel}" data-week="${week.weekIndex}">
+    <g class="crystal-static rest-layer" transform="translate(${point.x.toFixed(1)} ${point.y})" data-level="${week.contributionLevel}" data-scale="${style.scale}" data-color="${color}" data-week="${week.weekIndex}" data-route-progress="${key}">
       <polygon points="${points}" fill="${color}" stroke="${theme.text}" stroke-width="1.2"/>
     </g>`;
 }
@@ -162,12 +162,19 @@ export function renderCaveRunner(normalized, themeName = "dark") {
     if (index === 0) return `M${point.x.toFixed(1)} ${point.y}`;
     return `${path}H${point.x.toFixed(1)}V${point.y}`;
   }, "");
+  const routeDistances = points.reduce((distances, point, index) => {
+    if (index === 0) return [0];
+    const previous = points[index - 1];
+    return [...distances, distances.at(-1) + Math.abs(point.x - previous.x) + Math.abs(point.y - previous.y)];
+  }, []);
+  const totalRouteDistance = routeDistances.at(-1) || 1;
   const start = points[0];
   const finish = points.at(-1);
 
   const crystals = activeWeeks.map((week) => {
     const point = points[week.weekIndex];
-    const progress = Math.max(0.02, Math.min(0.965, week.weekIndex / Math.max(1, weeks.length - 1)));
+    const distanceProgress = routeDistances[week.weekIndex] / totalRouteDistance;
+    const progress = Math.max(0.015, Math.min(0.995, distanceProgress));
     return crystalMarkup(week, point, theme, progress);
   }).join("");
 

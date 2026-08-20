@@ -25,12 +25,12 @@ jobs:
 
     steps:
       - name: Check out profile source
-        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
 
       - name: Set up Node.js
-        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
         with:
-          node-version: "20"
+          node-version: "24"
 
       - name: Test Cave Runner
         run: node --test scripts/cave-runner/render.test.mjs
@@ -47,10 +47,28 @@ jobs:
           test -s dist/cave-runner-contribution-graph-dark.svg
           grep -q 'data-theme="light"' dist/cave-runner-contribution-graph.svg
           grep -q 'data-theme="dark"' dist/cave-runner-contribution-graph-dark.svg
-          ! grep -qi '<script' dist/cave-runner-contribution-graph*.svg
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          import xml.etree.ElementTree as ET
+
+          for path in Path("dist").glob("*.svg"):
+              root = ET.parse(path).getroot()
+              source = path.read_text(encoding="utf-8")
+              for element in root.iter():
+                  tag = element.tag.rsplit("}", 1)[-1].lower()
+                  if tag == "script":
+                      raise SystemExit(f"{path}: script elements are not allowed")
+                  for attribute, value in element.attrib.items():
+                      name = attribute.rsplit("}", 1)[-1].lower()
+                      if name in {"href", "src"} and re.match(r"\s*(?:https?:)?//", value, re.I):
+                          raise SystemExit(f"{path}: external resource is not allowed")
+              if re.search(r"url\(\s*['\"]?\s*(?:https?:)?//", source, re.I):
+                  raise SystemExit(f"{path}: external CSS resource is not allowed")
+          PY
 
       - name: Publish game assets
-        uses: crazy-max/ghaction-github-pages@c0d7ff0487ee0415efb7f32dab10ea880330b1dd # v3.1.0
+        uses: crazy-max/ghaction-github-pages@1d6ee9b181a81033a16bd707a1401afa978daab4 # v5
         with:
           target_branch: output
           build_dir: dist

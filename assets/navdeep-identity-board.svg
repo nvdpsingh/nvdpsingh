@@ -51,7 +51,7 @@
       <text x="128" y="36" fill="#A9BAD0" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">retrieval + evals</text>
       <text x="128" y="65" fill="#A9BAD0" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">small models + tools</text>
     </g>
-    <text x="24" y="248" fill="#607895" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12">find the signal / remove the noise</text>
+    <text x="24" y="248" fill="#8AA0BA" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12">find the signal / remove the noise</text>
   </g>
 
   <g transform="translate(410 96)">
@@ -66,7 +66,7 @@
       <g transform="translate(278 135)"><circle r="22" fill="#102335" stroke="#FFB86B" stroke-width="3" filter="url(#board-glow)"/><text y="4" fill="#EDF7F5">04</text><text y="48" fill="#8AA0BA">REFINE</text></g>
     </g>
     <path class="flow" d="M278 217C278 238 50 238 50 217" stroke="#4E6684" stroke-width="2" stroke-dasharray="5 8"/>
-    <text x="24" y="248" fill="#607895" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12">repeat until the system earns trust</text>
+    <text x="24" y="248" fill="#8AA0BA" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12">repeat until the system earns trust</text>
   </g>
 
   <g transform="translate(782 96)">
@@ -85,7 +85,7 @@
       <g class="chip" transform="translate(213 190)"><rect width="72" height="34" rx="8" fill="#2D241B" stroke="#FFB86B"/><text x="14" y="22" fill="#FFD5A3">AZURE</text></g>
       <g class="chip" transform="translate(296 190)"><rect width="60" height="34" rx="8" fill="#102D31" stroke="#57E3C3"/><text x="16" y="22" fill="#B9F5E8">AWS</text></g>
     </g>
-    <text x="24" y="248" fill="#607895" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12">model -> data -> api -> infrastructure</text>
+    <text x="24" y="248" fill="#8AA0BA" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12">model -> data -> api -> infrastructure</text>
     <rect class="cursor" x="352" y="238" width="3" height="13" fill="#57E3C3"/>
   </g>
 </svg>
