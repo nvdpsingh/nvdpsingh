@@ -250,9 +250,9 @@ export function renderCaveRunner(normalized, themeName = "dark") {
     <path class="exit-light" d="M0-21V16M-8-8H8" stroke="${theme.mint}" stroke-width="3" stroke-linecap="round" filter="url(#torch-glow)"/>
   </g>
 
-  <g class="motion-layer" transform="translate(${start.x} ${start.y})">
+  <g class="runner motion-layer">
     ${explorerMarkup(theme)}
-    <animateMotion path="${routePath}" dur="20s" repeatCount="indefinite" additive="sum"/>
+    <animateMotion path="${routePath}" dur="20s" repeatCount="indefinite"/>
   </g>
   <g class="rest-layer" transform="translate(${start.x} ${start.y})">${explorerMarkup(theme)}</g>
 

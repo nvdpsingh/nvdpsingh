@@ -71,6 +71,17 @@ test("times crystal collection against real tunnel distance", () => {
   assert.doesNotMatch(svg, /data-week="9" data-route-progress="0\.750"/);
 });
 
+test("keeps the runner centered on the absolute cave route", async () => {
+  const normalized = normalizeCalendar(await fixtureCalendar());
+  const svg = renderCaveRunner(normalized, "dark");
+  const runner = svg.match(/<g class="runner motion-layer"[^>]*>[\s\S]*?<animateMotion[^>]*\/>[\s\S]*?<\/g>/)?.[0];
+
+  assert.ok(runner, "animated runner group should be present");
+  assert.doesNotMatch(runner, /<g class="runner motion-layer"[^>]*transform=/);
+  assert.doesNotMatch(runner, /<animateMotion[^>]*additive=/);
+  assert.match(runner, /<animateMotion path="M74\.0 166/);
+});
+
 test("renders distinct light and dark themes", async () => {
   const normalized = normalizeCalendar(await fixtureCalendar());
   const light = renderCaveRunner(normalized, "light");
