@@ -1,0 +1,78 @@
+<svg width="1200" height="470" viewBox="0 0 1200 470" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Navdeep Singh - field notes</title>
+  <desc id="desc">A dark graph-paper field note connecting observation, retrieval, reasoning, building, and iteration.</desc>
+
+  <defs>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" stroke="#23344D" stroke-width="1" opacity="0.55"/>
+    </pattern>
+    <linearGradient id="edge" x1="650" y1="97" x2="1080" y2="370" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#57E3C3"/>
+      <stop offset="0.54" stop-color="#A99FFF"/>
+      <stop offset="1" stop-color="#FFB86B"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect x="3" y="3" width="1194" height="464" rx="28" fill="#07111F" stroke="#24364F" stroke-width="6"/>
+  <rect x="28" y="28" width="1144" height="414" rx="12" fill="url(#grid)"/>
+
+  <path d="M49 68H241" stroke="#57E3C3" stroke-width="3"/>
+  <text x="49" y="57" fill="#8AA0BA" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" letter-spacing="3">FIELD NOTE / 001</text>
+  <text x="49" y="137" fill="#EDF7F5" font-family="Arial, Helvetica, sans-serif" font-size="62" font-weight="700" letter-spacing="-2">Navdeep Singh</text>
+  <text x="52" y="187" fill="#A9BAD0" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" letter-spacing="1">BUILDER OF SYSTEMS THAT LEARN, REMEMBER &amp; REASON</text>
+
+  <text x="51" y="264" fill="#EDF7F5" font-family="Arial, Helvetica, sans-serif" font-size="28">A question becomes a sketch.</text>
+  <text x="51" y="303" fill="#EDF7F5" font-family="Arial, Helvetica, sans-serif" font-size="28">A sketch becomes a system.</text>
+  <path d="M48 323C156 316 271 328 404 319" stroke="#FFB86B" stroke-width="3" stroke-linecap="round"/>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" letter-spacing="1.5">
+    <text x="50" y="406" fill="#57E3C3">SYSTEMS</text>
+    <text x="147" y="406" fill="#4E6684">/</text>
+    <text x="174" y="406" fill="#A99FFF">MODELS</text>
+    <text x="261" y="406" fill="#4E6684">/</text>
+    <text x="288" y="406" fill="#FFB86B">MEMORY</text>
+    <text x="382" y="406" fill="#4E6684">/</text>
+    <text x="409" y="406" fill="#EDF7F5">CURIOSITY</text>
+  </g>
+
+  <g stroke="url(#edge)" stroke-width="2.5" stroke-linecap="round">
+    <path d="M683 135L821 92L952 157L1071 94"/>
+    <path d="M683 135L754 254L899 282L952 157"/>
+    <path d="M754 254L698 371L899 282L1059 362"/>
+    <path d="M952 157L1059 362" opacity="0.65"/>
+    <path d="M821 92L899 282" opacity="0.5" stroke-dasharray="7 9"/>
+  </g>
+
+  <g fill="#07111F" stroke-width="4">
+    <circle cx="683" cy="135" r="13" stroke="#57E3C3"/>
+    <circle cx="821" cy="92" r="10" stroke="#57E3C3"/>
+    <circle cx="952" cy="157" r="17" stroke="#A99FFF" filter="url(#glow)"/>
+    <circle cx="1071" cy="94" r="10" stroke="#A99FFF"/>
+    <circle cx="754" cy="254" r="15" stroke="#57E3C3"/>
+    <circle cx="899" cy="282" r="13" stroke="#FFB86B"/>
+    <circle cx="698" cy="371" r="10" stroke="#FFB86B"/>
+    <circle cx="1059" cy="362" r="16" stroke="#FFB86B" filter="url(#glow)"/>
+  </g>
+
+  <g fill="#A9BAD0" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" letter-spacing="1">
+    <text x="645" y="111">observe</text>
+    <text x="790" y="63">signal</text>
+    <text x="925" y="125" fill="#D9D4FF">retrieve</text>
+    <text x="1062" y="67">context</text>
+    <text x="708" y="287" fill="#B9F5E8">reason</text>
+    <text x="872" y="317" fill="#FFD5A3">build</text>
+    <text x="653" y="405">measure</text>
+    <text x="1016" y="402" fill="#FFD5A3">iterate</text>
+  </g>
+
+  <path d="M1099 241C1148 258 1152 312 1121 342" stroke="#4E6684" stroke-width="2" stroke-dasharray="5 8"/>
+  <path d="M1119 330L1121 342L1132 337" stroke="#4E6684" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1091" y="225" fill="#4E6684" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" transform="rotate(8 1091 225)">keep going</text>
+</svg>
