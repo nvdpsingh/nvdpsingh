@@ -4,7 +4,7 @@
 
 Turn Navdeep Singh's GitHub profile README into a visual identity board that communicates his interests and working style before a visitor reads any long-form text. The page must remain personal rather than recruitment-oriented, must not mention any employer, and must only present skills supported by the latest resume.
 
-The signature interaction is an original animated contribution game called **Cave Runner**. A small explorer moves through Navdeep's real contribution calendar and collects crystal-shaped contribution cells.
+The signature interaction is an original animated contribution game called **Cave Runner**. A small explorer moves through a cave generated from Navdeep's real contribution calendar and collects weekly diamonds.
 
 ## Experience
 
@@ -34,11 +34,12 @@ Motion is restrained to three orchestrated moments: flowing network edges in the
 
 ## Cave Runner Behavior
 
-The generator will turn the most recent GitHub contribution calendar into a 53-column by 7-row cave.
+The generator will turn the most recent GitHub contribution calendar into a winding, room-like cave route.
 
 - Each day is normalized into a cell with date, count, weekday, week index, and contribution level.
-- Days with contributions render as crystals. The four GitHub contribution levels map to four crystal sizes and brightness levels.
-- An original pixel explorer follows a deterministic serpentine route through the calendar.
+- Active days are aggregated by week so the cave remains legible instead of showing hundreds of tiny items. Each active week becomes one diamond; its strongest GitHub contribution level controls size and color.
+- The HUD preserves the full data by showing weekly diamonds, active days, and total contribution XP.
+- An original pixel explorer follows a deterministic route through carved chambers, boulders, torches, and an exit gate.
 - Crystals disappear as the explorer reaches their cells, then reset when the loop restarts.
 - A compact HUD displays `CAVE RUNNER`, the total number of contribution crystals, and a progress bar.
 - The complete loop targets 16-20 seconds so the movement is visible without becoming distracting.

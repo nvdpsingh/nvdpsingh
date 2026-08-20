@@ -18,6 +18,36 @@
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
+    <style>
+      .flow-edge {
+        stroke-dasharray: 10 12;
+        animation: flow 9s linear infinite;
+      }
+      .node-pulse {
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: pulse 3.6s ease-in-out infinite;
+      }
+      .node-pulse:nth-child(2n) { animation-delay: -1.2s; }
+      .node-pulse:nth-child(3n) { animation-delay: -2.4s; }
+      .sketch-line {
+        stroke-dasharray: 380;
+        stroke-dashoffset: 380;
+        animation: draw 1.8s ease-out 0.35s forwards;
+      }
+      .loop-arrow { animation: fade 2.8s ease-in-out infinite; }
+      @keyframes flow { to { stroke-dashoffset: -220; } }
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); opacity: 0.82; }
+        50% { transform: scale(1.16); opacity: 1; }
+      }
+      @keyframes draw { to { stroke-dashoffset: 0; } }
+      @keyframes fade { 0%, 100% { opacity: 0.35; } 50% { opacity: 1; } }
+      @media (prefers-reduced-motion: reduce) {
+        .flow-edge, .node-pulse, .sketch-line, .loop-arrow { animation: none; }
+        .sketch-line { stroke-dashoffset: 0; }
+      }
+    </style>
   </defs>
 
   <rect x="3" y="3" width="1194" height="464" rx="28" fill="#07111F" stroke="#24364F" stroke-width="6"/>
@@ -30,7 +60,7 @@
 
   <text x="51" y="264" fill="#EDF7F5" font-family="Arial, Helvetica, sans-serif" font-size="28">A question becomes a sketch.</text>
   <text x="51" y="303" fill="#EDF7F5" font-family="Arial, Helvetica, sans-serif" font-size="28">A sketch becomes a system.</text>
-  <path d="M48 323C156 316 271 328 404 319" stroke="#FFB86B" stroke-width="3" stroke-linecap="round"/>
+  <path class="sketch-line" d="M48 323C156 316 271 328 404 319" stroke="#FFB86B" stroke-width="3" stroke-linecap="round"/>
 
   <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" letter-spacing="1.5">
     <text x="50" y="406" fill="#57E3C3">SYSTEMS</text>
@@ -42,7 +72,7 @@
     <text x="409" y="406" fill="#EDF7F5">CURIOSITY</text>
   </g>
 
-  <g stroke="url(#edge)" stroke-width="2.5" stroke-linecap="round">
+  <g class="flow-edge" stroke="url(#edge)" stroke-width="2.5" stroke-linecap="round">
     <path d="M683 135L821 92L952 157L1071 94"/>
     <path d="M683 135L754 254L899 282L952 157"/>
     <path d="M754 254L698 371L899 282L1059 362"/>
@@ -51,14 +81,14 @@
   </g>
 
   <g fill="#07111F" stroke-width="4">
-    <circle cx="683" cy="135" r="13" stroke="#57E3C3"/>
-    <circle cx="821" cy="92" r="10" stroke="#57E3C3"/>
-    <circle cx="952" cy="157" r="17" stroke="#A99FFF" filter="url(#glow)"/>
-    <circle cx="1071" cy="94" r="10" stroke="#A99FFF"/>
-    <circle cx="754" cy="254" r="15" stroke="#57E3C3"/>
-    <circle cx="899" cy="282" r="13" stroke="#FFB86B"/>
-    <circle cx="698" cy="371" r="10" stroke="#FFB86B"/>
-    <circle cx="1059" cy="362" r="16" stroke="#FFB86B" filter="url(#glow)"/>
+    <circle class="node-pulse" cx="683" cy="135" r="13" stroke="#57E3C3"/>
+    <circle class="node-pulse" cx="821" cy="92" r="10" stroke="#57E3C3"/>
+    <circle class="node-pulse" cx="952" cy="157" r="17" stroke="#A99FFF" filter="url(#glow)"/>
+    <circle class="node-pulse" cx="1071" cy="94" r="10" stroke="#A99FFF"/>
+    <circle class="node-pulse" cx="754" cy="254" r="15" stroke="#57E3C3"/>
+    <circle class="node-pulse" cx="899" cy="282" r="13" stroke="#FFB86B"/>
+    <circle class="node-pulse" cx="698" cy="371" r="10" stroke="#FFB86B"/>
+    <circle class="node-pulse" cx="1059" cy="362" r="16" stroke="#FFB86B" filter="url(#glow)"/>
   </g>
 
   <g fill="#A9BAD0" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" letter-spacing="1">
@@ -72,7 +102,7 @@
     <text x="1016" y="402" fill="#FFD5A3">iterate</text>
   </g>
 
-  <path d="M1099 241C1148 258 1152 312 1121 342" stroke="#4E6684" stroke-width="2" stroke-dasharray="5 8"/>
-  <path d="M1119 330L1121 342L1132 337" stroke="#4E6684" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="loop-arrow" d="M1099 241C1148 258 1152 312 1121 342" stroke="#4E6684" stroke-width="2" stroke-dasharray="5 8"/>
+  <path class="loop-arrow" d="M1119 330L1121 342L1132 337" stroke="#4E6684" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
   <text x="1091" y="225" fill="#4E6684" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" transform="rotate(8 1091 225)">keep going</text>
 </svg>

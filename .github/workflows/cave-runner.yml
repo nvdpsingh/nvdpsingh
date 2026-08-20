@@ -1,0 +1,58 @@
+name: Generate Cave Runner
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/cave-runner/**"
+      - ".github/workflows/cave-runner.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cave-runner-output
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out profile source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: "20"
+
+      - name: Test Cave Runner
+        run: node --test scripts/cave-runner/render.test.mjs
+
+      - name: Generate light and dark games
+        run: node scripts/cave-runner/generate.mjs --out-dir dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: ${{ github.repository_owner }}
+
+      - name: Validate generated files
+        run: |
+          test -s dist/cave-runner-contribution-graph.svg
+          test -s dist/cave-runner-contribution-graph-dark.svg
+          grep -q 'data-theme="light"' dist/cave-runner-contribution-graph.svg
+          grep -q 'data-theme="dark"' dist/cave-runner-contribution-graph-dark.svg
+          ! grep -qi '<script' dist/cave-runner-contribution-graph*.svg
+
+      - name: Publish game assets
+        uses: crazy-max/ghaction-github-pages@c0d7ff0487ee0415efb7f32dab10ea880330b1dd # v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,13 @@
+<svg width="250" height="54" viewBox="0 0 250 54" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Open Navdeep's LinkedIn">
+  <style>
+    .sweep { animation: sweep 3.8s ease-in-out 1.2s infinite; }
+    @keyframes sweep { 0%, 30% { transform: translateX(-70px); opacity: 0; } 55% { opacity: .3; } 80%, 100% { transform: translateX(270px); opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .sweep { animation: none; display: none; } }
+  </style>
+  <rect x="1" y="1" width="248" height="52" rx="12" fill="#0B1728" stroke="#A99FFF" stroke-width="2"/>
+  <rect x="21" y="16" width="24" height="24" rx="5" fill="#A99FFF"/>
+  <text x="27" y="34" fill="#07111F" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700">in</text>
+  <text x="58" y="34" fill="#EDF7F5" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" letter-spacing="1.5">LINKEDIN</text>
+  <path d="M209 27H229M223 21L229 27L223 33" stroke="#A99FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="sweep" x="0" y="1" width="48" height="52" fill="#A99FFF" opacity="0"/>
+</svg>

@@ -3,55 +3,54 @@
 </p>
 
 <p align="center">
-  <a href="https://nvdpsingh.github.io/Portfolio/">portfolio</a>
-  &nbsp;&middot;&nbsp;
-  <a href="https://linkedin.com/in/navdeep-singh-398494b3">linkedin</a>
-  &nbsp;&middot;&nbsp;
-  <a href="mailto:navdeepsinghdhangar@gmail.com">say hello</a>
+  <a href="https://nvdpsingh.github.io/Portfolio/"><img src="./assets/contact-portfolio.svg" alt="Portfolio" height="42"></a>
+  &nbsp;
+  <a href="https://linkedin.com/in/navdeep-singh-398494b3"><img src="./assets/contact-linkedin.svg" alt="LinkedIn" height="42"></a>
+  &nbsp;
+  <a href="mailto:navdeepsinghdhangar@gmail.com"><img src="./assets/contact-email.svg" alt="Email Navdeep" height="42"></a>
 </p>
 
-## Field notes
+<p align="center">
+  <img src="./assets/navdeep-identity-board.svg" alt="Navdeep's identity board: current curiosities, build loop, and working set" width="100%">
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/nvdpsingh/nvdpsingh/output/cave-runner-contribution-graph-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/nvdpsingh/nvdpsingh/output/cave-runner-contribution-graph.svg">
+    <img src="https://raw.githubusercontent.com/nvdpsingh/nvdpsingh/output/cave-runner-contribution-graph.svg" alt="Cave Runner: an explorer collecting diamonds generated from Navdeep's GitHub contributions" width="100%">
+  </picture>
+</p>
+
+> I like the layer between a promising model and a dependable system - the part where memory, retrieval, evaluation, latency, and the person using it all begin to matter.
+
+<details>
+<summary><strong>Open the field notes</strong></summary>
+<br>
 
 Most of my repositories begin the same way: a question, a rough diagram, and a Python file with a very temporary name.
-
-I am drawn to the point where an AI demo has to become a dependable system - where memory, retrieval, evaluation, latency, and the person using it all start to matter at once.
 
 ```text
 observe  ->  retrieve  ->  reason  ->  build  ->  measure  ->  repeat
 ```
 
-Things I keep returning to:
+- How does memory change an agent over a long conversation?
+- How can retrieval and evaluation make generative systems less mysterious?
+- How capable can a small model become when it learns to use tools?
+- How do you make a complicated system feel simple from the outside?
 
-- How memory changes the way an agent behaves over a long conversation
-- How retrieval and evaluation make generative systems less mysterious
-- How smaller models can become surprisingly capable tool users
-- How to make complicated systems feel simple from the outside
+</details>
 
-## Working set
+<details>
+<summary><strong>Open the working set</strong></summary>
+<br>
 
-```yaml
-curious_about:
-  - agent memory and orchestration
-  - retrieval, evaluation, and observability
-  - useful small models
+`Python` `PyTorch` `Transformers` `FastAPI` `PostgreSQL` `Redis` `Docker` `GCP` `Azure` `AWS`
 
-often_reaching_for:
-  - Python / PyTorch / Transformers
-  - FastAPI / PostgreSQL / Redis
-  - Docker / GCP / Azure / AWS
+I learn by building the whole path - model, data, API, infrastructure, evaluation, and the final interaction.
 
-always_optimizing:
-  - clarity
-  - reliability
-  - the distance between an idea and a working system
-```
-
-## Margin notes
-
-I learn by building the whole path, not just the interesting middle. That usually means following an idea from a model or paper through data, APIs, infrastructure, evaluation, and the final interaction.
-
-This profile is the public edge of that notebook. The repositories are the pages.
+</details>
 
 <p align="center">
-  <sub>Bay Area, California &nbsp;/&nbsp; usually somewhere between a whiteboard and a terminal</sub>
+  <sub>Bay Area, California &nbsp;/&nbsp; somewhere between a whiteboard and a terminal</sub>
 </p>
